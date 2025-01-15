@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage with Toggle Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Fixed Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        /* Page Layout */
+        .container {
+            display: flex;
+            margin-top: 50px; /* Offset for navbar height */
+            height: calc(100vh - 100px);
+        }
+
+        #left-menu {
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            overflow-y: auto;
+            transition: width 0.3s;
+        }
+
+        #left-menu.collapsed {
+            width: 5%; /* Collapse width */
+        }
+
+        #left-menu.collapsed button {
+            display: block;
+            margin: auto;
+        }
+
+        .main-content {
+            width: 60%;
+            background-color: #fff;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .right-panel {
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        /* Footer */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Button for toggling menu */
+        #toggle-menu {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            background-color: #555;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<div class="navbar">
+    Fixed Navbar
+</div>
+
+<!-- Page Content -->
+<div class="container">
+    <div id="left-menu">
+        <button id="toggle-menu">Toggle Menu</button>
+        <p>Left Menu Content</p>
+        <p>More Content</p>
+    </div>
+    <div class="main-content">
+        <h1>Main Content Area</h1>
+        <p>This is the main content area.</p>
+    </div>
+    <div class="right-panel">
+        <h2>Right Side Panel</h2>
+        <p>Additional information goes here.</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    Footer Content
+</div>
+
+<!-- JavaScript -->
+<script src="./js/script.js"></script>
+</body>
+</html>
